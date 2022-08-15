@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- icons -->
+    <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- mapbox api -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <title>RHR</title>
+</head>
+<body>
+
+  <!-- header section -->
+
+  <header id="header">
+    <div id="navbar">
+       <div class="hamburger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+       </div>
+       <div class="logo">
+          <a href="index.html" class="tethics-logo">RHR</a>
+       </div>
+       <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          
+          
+          <li id="login-button"><a href="pages/login.html"><img src="assets/person-outline.svg" id="icon" alt=""></a></li>
+       </ul>
+    </div>
+ </header>
+
+
+
+  <!-- banner section -->
+
+  <section class="banner">
+    <h1>Ranoli High School, Ranoli</h1>
+    <h2>A Building With Four Walls And Tomorrow Inside</h2>
+    <p>Our mission is to work together to build a safe, respectful and nurturing environment focused on maximizing each child’s sense of wellbeing and acquisition of skills for life and learning.
+      We foster an enthusiastic, creative community of learners prepared to continue their intellectual, emotional, and physical development.
+    </p>
+    
+  </section>
+
+
+
+ 
+
+
+
+  <!-- about section -->
+
+  <div class="features" id="about">
+    <div class="flex">
+       <div class="flex-info">
+          <h1 style="font-size: 3.3rem;">About Us</h1>
+          <br>
+          <p>The year of establishment of Ranoli High School is 1970. Ranoli High School is a Co-Educational school. The student teacher ratio of Ranoli High School can be approximated to be 1 teacher for every 45 students. It is a Grant-aid School (Class 1-12), where lowest class is 1st and highest class is 12th.   </p>
+       </div>
+       <div class="flex-image">
+          <img src="/assets/logo.png" alt="">
+       </div>
+    </div>
+  </div>
+
+
+
+  <!-- vision section -->
+
+  <div class='vision'>
+      <div class='row'>
+        <div class='column'>
+            <div class='vision-column'>
+              <h1>Our Vision</h1>
+              <p>Our vision is to empower students to acquire, demonstrate, articulate and value knowledge and skills that will support them, as life-long learners, to participate in and contribute to the global world and practise the core values of the school: respect, tolerance & inclusion, and excellence. We strive to support this environment by building a more inclusive curriculum, addressing a range of learning styles, offering a wide array of diversity efforts and programs, and by participating in the wider community.
+              </p>
+            </div>
+        </div>
+      </div>
+  </div>
+
+
+
+  <!-- facilities section -->
+
+  <section class="facilities" id="facilities">
+    <h1>Facilities</h1>
+    <p>Our commitment to excellence extends to the facilities we provide on campus. The infrastructure, sports arenas, music room, library, laboratories, medical facilities are all designed to be a part of the green surroundings. RHR is a well-designed campus which offers all the modern facilities that are needed to provide the students a safe, secure and happy learning environment.            </p>
+
+  </section>
+
+
+
+  
+       
+      
+
+
+
+  <!-- map section -->
+
+  <div class="location" style="text-align: center; margin-top: 100px;">
+    <a href="mailto:rhr_172@yahoo.com"><button>Mail Us</button></a>
+    <h1 style="font-size: 3.3rem;">Our School's Location</h1>
+   
+    <p style="margin-top: 30px; font-size: 1.5rem;"> <b>Address: </b> Ranoli, Anand, Gujarat, India</p>
+ 
+  </div>
+
+
+
+  <!-- bottom footer section -->
+
+  <div class="bottom">
+    <span id="bottom-p">
+       <center>
+          Ranoli High School, Ranoli | Made with &hearts; by Rudra Bhatt
+       </center>
+    </span>
+  </div>
+
+
+
+  <!-- scroll to top button -->
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><ion-icon style="font-size: 1.3rem;" name="arrow-up-outline"></ion-icon></button>
+
+
+
+  <!-- js -->
+
+
+  <!-- mapbox api integration -->
+
+  <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic2FoaWwwNiIsImEiOiJja3NlYXAzcGUweXZzMm9vZDF6a213a3YwIn0.2TqRpF9Ot8N3TcY5vKY0ag';
+      const map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11', 
+          center: [77.4126, 23.2599], 
+          zoom: 12
+      });
+
+      const marker1 = new mapboxgl.Marker()
+      .setLngLat([77.4126, 23.2599])
+      .addTo(map);
+  </script>
+
+
+
+  <!-- scroll to top js -->
+
+  <script>
+      var mybutton = document.getElementById("myBtn");
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+  </script>
+
+
+  <!-- custom js -->
+  
+  <script src="js/main.js"></script>
+
+</body>
+</html>
